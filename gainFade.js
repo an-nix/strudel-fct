@@ -1,6 +1,6 @@
 
 // Fade IN: gradually increase gain from start to end value
-const gainFadeIn = register('gainFadeIn', (fadeTime, startValue, endValue, pat) => {
+export const gainFadeIn = register('gainFadeIn', (fadeTime, startValue, endValue, pat) => {
   const ft = fadeTime ?? 8;
   const sv = startValue ?? 0;
   const ev = endValue ?? 1;
@@ -14,7 +14,7 @@ const gainFadeIn = register('gainFadeIn', (fadeTime, startValue, endValue, pat) 
 });
 
 // Fade OUT: stay at plateau then gradually decrease gain
-const gainFadeOut = register('gainFadeOut', (plateauTime, fadeTime, plateauValue, endValue, pat) => {
+export const gainFadeOut = register('gainFadeOut', (plateauTime, fadeTime, plateauValue, endValue, pat) => {
   const pt = plateauTime ?? 8;
   const ft = fadeTime ?? 8;
   const pv = plateauValue ?? 1;
